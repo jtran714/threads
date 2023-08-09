@@ -63,14 +63,14 @@ export default function AccountProfile({ user, btnTitle }: Props) {
         }
       }
   
-      await updateUser({
-        name: values.name,
-        path: pathname,
-        username: values.username,
-        userId: user.id,
-        bio: values.bio,
-        image: values.profile_photo,
-      });
+    //   await updateUser({
+    //     name: values.name,
+    //     path: pathname,
+    //     username: values.username,
+    //     userId: user.id,
+    //     bio: values.bio,
+    //     image: values.profile_photo,
+    //   });
   
       if (pathname === "/profile/edit") {
         router.back();
