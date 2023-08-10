@@ -10,6 +10,7 @@ interface Params {
     name: string;
     bio: string;
     image: string;
+    
     path: string;
 }
 
