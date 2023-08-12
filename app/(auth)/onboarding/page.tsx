@@ -1,7 +1,7 @@
 import AccountProfile from "@/components/forms/AccountProfile";
 import { currentUser } from "@clerk/nextjs";
 
-async function Page() {
+export default async function Page() {
     const user = await  currentUser();
     const userInfo = {};
     const userData = {
@@ -25,6 +25,4 @@ async function Page() {
             </section>
         </main>
     )
-}
-
-export default Page;
+};
