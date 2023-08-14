@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-
 import { Button } from "../ui/button";
 
 interface Props {
@@ -35,11 +34,17 @@ export default function Pagination({ pageNumber, isNext, path }: Props) {
     <div className='pagination'>
       <Button
         onClick={() => handleNavigation("prev")}
-        disabled={pageNumber === 1}>
+        disabled={pageNumber === 1}
+        className='!text-small-regular text-light-2'
+      >
         Prev
       </Button>
-      <p>{pageNumber}</p>
-      <Button>
+      <p className='text-small-semibold text-light-1'>{pageNumber}</p>
+      <Button
+        onClick={() => handleNavigation("next")}
+        disabled={!isNext}
+        className='!text-small-regular text-light-2'
+      >
         Next
       </Button>
     </div>
