@@ -7,7 +7,6 @@ import ProfileHeader from "@/components/shared/ProfileHeader";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { fetchCommunityDetails } from "@/lib/actions/community.actions";
 
-
 export default async function Page({ params }: { params: { id: string } }) {
   const user = await currentUser();
   if (!user) return null;
