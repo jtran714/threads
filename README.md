@@ -1,8 +1,8 @@
 ## THIS APP IS A WORK IN PROGRESS, PLANNING TO ADD A LOT MORE FEATURES! :D
 
-
-
-
+```
+Link is in the description to see progress.
+```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
