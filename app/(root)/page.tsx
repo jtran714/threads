@@ -5,7 +5,7 @@ import Searchbar from "@/components/shared/Searchbar";
 import Pagination from "@/components/shared/Pagination";
 import { fetchUser, fetchUsers } from "@/lib/actions/user.actions";
 
-async function Page({
+export default async function Page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | undefined };
