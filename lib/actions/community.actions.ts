@@ -21,7 +21,7 @@ export async function createCommunity(
     const user = await User.findOne({ id: createdById });
 
     if (!user) {
-      throw new Error("User not found"); // Handle the case if the user with the id is not found
+      throw new Error("User not found");
     }
 
     const newCommunity = new Community({
@@ -142,7 +142,6 @@ export async function fetchCommunities({
       .limit(pageSize)
       .populate("members");
 
-    // Count the total number of communities that match the search criteria (without pagination).
     const totalCommunitiesCount = await Community.countDocuments(query);
 
     const communities = await communitiesQuery.exec();
