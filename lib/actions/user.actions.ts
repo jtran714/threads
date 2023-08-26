@@ -92,7 +92,7 @@ export async function fetchUserPosts(userId: string) {
   }
 }
 
-// Almost similar to Thead (search + pagination) and Community (search + pagination)
+// Almost similar to Thead (search) and Community (search)
 export async function fetchUsers({
   userId,
   searchString = "",
@@ -136,7 +136,7 @@ export async function fetchUsers({
       .skip(skipAmount)
       .limit(pageSize);
 
-    // Count the total number of users that match the search criteria (without pagination).
+    // Count the total number of users that match the search criteria
     const totalUsersCount = await User.countDocuments(query);
 
     const users = await usersQuery.exec();
