@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { formatDateString } from "@/lib/utils";
 import DeleteThread from "../forms/DeleteThread";
+import { useState } from "react";
 
 interface Props {
     id: string;
@@ -38,6 +39,11 @@ interface Props {
     comments,
     isComment,
   }: Props) {
+
+    const[likes, setLikes] = useState(0);
+    const handleLike = () => {
+      setLikes(likes + 1);
+    }
 
     return (
         <article
@@ -77,6 +83,7 @@ interface Props {
                     width={24}
                     height={24}
                     className='cursor-pointer object-contain'
+                    onCLick={handleLike}
                   />
                   <Link href={`/thread/${id}`}>
                     <Image
