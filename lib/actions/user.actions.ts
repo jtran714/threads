@@ -92,7 +92,7 @@ export async function fetchUserPosts(userId: string) {
   }
 }
 
-// Almost similar to Thead (search) and Community (search)
+
 export async function fetchUsers({
   userId,
   searchString = "",
